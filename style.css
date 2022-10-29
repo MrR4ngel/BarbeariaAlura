@@ -6,6 +6,7 @@ header {
     background: #BBBBBB;
     padding: 20px 0;
 }
+
 .caixa {
     position: relative;
     width: 940px;
@@ -23,7 +24,7 @@ nav li {
     margin: 0 0 0 15px;
 }
 
-nav a{
+nav a {
     text-transform: uppercase;
     color: #000000;
     font-weight: bold;
@@ -63,7 +64,7 @@ nav a:hover {
     border-color: #117c16;
 }
 
-.produtos li:hover h2{
+.produtos li:hover h2 {
     font-size: 35px;
 }
 
@@ -94,15 +95,13 @@ footer {
     margin: 20px 0 0;
 }
 
-main {
-    
-}
 
 form {
     margin: 40px 0;
 }
 
-form label, form legend{
+form label,
+form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -152,13 +151,15 @@ td,th {
     padding: 8px 15px;
 }
 
+/*------------------ Index ------------------ */
+
 .banner {
     width: 100%;
 }
 
 .titulo-principal {
     text-align: center;
-    font-size: 2em ;
+    font-size: 2em;
     margin: 0 0 1em;
     clear: left;
 }
@@ -166,13 +167,15 @@ td,th {
 .principal {
     padding: 3em 0;
     background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
-.principal p{
+.principal p {
     margin: 0 0 1em;
 }
 
-.principal strong{
+.principal strong {
     font-weight: bold;
 }
 
@@ -184,15 +187,28 @@ td,th {
     width: 120px;
     float: left;
     margin: 0 20px 0 20px;
+    box-shadow: 10px 10px 15px #817a7ad5;
+    border-radius: 5px;
 }
 
 .mapa {
     padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
-.mapa p{
+.mapa-conteudo {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.mapa p {
     margin: 2em;
     text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
 }
 
 .conteudo-beneficios {
@@ -206,6 +222,19 @@ td,th {
     vertical-align: top;
 }
 
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px 10px rgba(0, 0, 0,0.6);
+
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+}
+
 .itens {
     line-height: 1.5;
 }
@@ -214,16 +243,31 @@ td,th {
     font-weight: bold;
 }
 
-.beneficios {
-    padding: 3em 0;
-    background: #888888;
-}
-
-.imagem-beneficios {
-    width: 60%;
+.itens:before {
+    content: "★";
 }
 
 .video {
     width: 560px;
     margin: 2em auto;
+}
+
+.style-contato {
+    width: 940px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+    .caixa, .conteudo-beneficios, .principal, .mapa-conteudo, .video{ 
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
 }
